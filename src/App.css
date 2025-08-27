@@ -1,0 +1,108 @@
+/* General styling */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+  width: 320px;
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 10px; /* 👈 Add padding to the outer container */
+}
+
+/* Display (screen) */
+.display {
+  background-color: #34495e;
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  text-align: right;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin: 10px; /* 👈 Add margin inside the calculator */
+  border-radius: 5px; /* Optional: Rounded corners for display */
+}
+
+/* Buttons grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: #34495e;
+  padding: 10px; /* 👈 Add padding to buttons container */
+}
+
+/* Rest of the button styles remain the same */
+.buttons button {
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buttons button:not(.operator, .equals, .clear, .delete) {
+  background-color: #ecf0f1;
+}
+
+.buttons button:not(.operator, .equals, .clear, .delete):hover {
+  background-color: #d5dbdb;
+}
+
+.buttons .operator {
+  background-color: #3498db;
+  color: white;
+}
+
+.buttons .operator:hover {
+  background-color: #2980b9;
+}
+
+.buttons .equals {
+  background-color: #2ecc71;
+  color: white;
+  grid-column: span 2;
+}
+
+.buttons .equals:hover {
+  background-color: #27ae60;
+}
+
+.buttons .clear {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.buttons .clear:hover {
+  background-color: #c0392b;
+}
+
+.buttons .delete {
+  background-color: #f39c12;
+  color: white;
+}
+
+.buttons .delete:hover {
+  background-color: #d35400;
+}
+
+.footer {
+    font-weight: bold;
+    text-align: left;
+    font-size: 0.8rem;
+    color: #e7eff0;
+    margin-top: 10px;
+    padding: 10px;
+  }
